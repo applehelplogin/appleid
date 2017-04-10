@@ -1,0 +1,17 @@
+HTTrack3.48-22+htsswf+htsjava launched on Mon, 10 Apr 2017 03:13:40 at https://iforgot.apple.com/password/verify/appleid +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://iforgot.apple.com/password/verify/appleid -O1 "C:\My Web Sites\Apple Help" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+03:13:42	Warning: 	Moved Temporarily for https://iforgot.apple.com/robots.txt
+03:13:42	Warning: 	File has moved from https://iforgot.apple.com/robots.txt to /404
+03:14:00	Error: 	"Not Found" (404) at link https://iforgot.apple.com/bin/dist/ac-sasskit/build/ac-assets/ac-colornav/productred.png (from https://iforgot.apple.com/cssj/N284380771/app.css)
+03:14:00	Error: 	"Not Found" (404) at link https://iforgot.apple.com/bin/dist/ac-sasskit/build/ac-assets/ac-forms/fallbacks/icons_forms_sprite.png (from https://iforgot.apple.com/cssj/N284380771/app.css)
+03:14:00	Error: 	"Not Found" (404) at link https://www.apple.com/ac/globalnav/2.0/en_US/assets/ac-store/view.png (from https://www.apple.com/ac/globalnav/2.0/en_US/styles/ac-globalnav.built.css)
+03:14:00	Error: 	"Not Found" (404) at link https://images.apple.com/ac/globalnav/2.0/en_US/scripts/mustache.js (from https://www.apple.com/ac/globalnav/2.0/en_US/scripts/ac-globalnav.built.js)
+
+HTTrack Website Copier/3.48-22 mirror complete in 20 seconds : 71 links scanned, 66 files written (1425229 bytes overall) [532055 bytes received at 26602 bytes/sec], 1416552 bytes transferred using HTTP compression in 25 files, ratio 29%, 3.3 requests per connection
+(4 errors, 2 warnings, 0 messages)

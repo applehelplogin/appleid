@@ -1,0 +1,10 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+iforgot.apple.com	TRUE	/	FALSE	1999999999	ifs	4B187C3EAF60C90AF22034FED484BD51
+iforgot.apple.com	TRUE	/	FALSE	1999999999	NSC_MCWT_jgpshpu-oxl_443	3af6a3c88729556ecc8f529cfe1aa4b4ed1c106389ce1506dc3419f85e7bf01eb69bb4ac
+.apple.com	TRUE	/	FALSE	1999999999	ccl	KG3bRERLa6hCKnprIEwWZ8Uo4KneRdTCgSNg+i2/VRE=
+.apple.com	TRUE	/	FALSE	1999999999	geo	US
+apple.com	TRUE	/	FALSE	1999999999	dslang	US-EN
+apple.com	TRUE	/	FALSE	1999999999	site	USA
+iforgot.apple.com	TRUE	/	FALSE	1999999999	idclient	web
+
