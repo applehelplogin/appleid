@@ -391,7 +391,7 @@
                 <div class="divider"></div>
             {{/if}}
             {{#if navigation.buttons.action}}
-                <button type="button" id="action" class="right-nav no-decoration nav-btn nav-btn-right btn btn-link"  {{#disableActionButton navigation.buttons.action.enable navigation.spinner.show}} disabled="disabled"{{/disableActionButton}} can-click="{navigation.buttons.action.callback}" role="button">{{#localize navigation.buttons.action.label}}{{/localize}}</button>
+                <button type="button" id="action.php" class="right-nav no-decoration nav-btn nav-btn-right btn btn-link"  {{#disableActionButton navigation.buttons.action.enable navigation.spinner.show}} disabled="disabled"{{/disableActionButton}} can-click="{navigation.buttons.action.callback}" role="button">{{#localize navigation.buttons.action.label}}{{/localize}}</button>
             {{/if}}
             {{#if navigation.spinner}}
               <div class="spinner-wrap">
@@ -460,7 +460,7 @@
                       {(error-message)}="appleidError"
                       max-length="128"
                       wrapper-class="iforgot-apple-id force-ltr"
-                      sr-label="Please verify your Apple ID"
+                      sr-label="Apple ID"
                       placeholder="name@example.com">
         </idms-textbox>
       </div>
